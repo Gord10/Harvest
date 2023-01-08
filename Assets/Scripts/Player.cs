@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Player : MonoBehaviour
 {
     public float speed = 5;
 
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
     private Vector2 desiredMovement;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
 
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         desiredMovement = new Vector2();
 
     }
@@ -54,15 +57,20 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-
-        backgroundManager.Move(-desiredMovement.x * speed * Time.deltaTime);
+        if(backgroundManager)
+        {
+            backgroundManager.Move(-desiredMovement.x * speed * Time.deltaTime);
+        }
     }
 
     private void FixedUpdate()
     {
-        Vector2 velocity = desiredMovement * speed;
-        velocity.x = 0;
-        rigidbody2D.velocity = velocity;
+        if(rigidbody2D)
+        {
+            Vector2 velocity = desiredMovement * speed;
+            velocity.x = 0;
+            rigidbody2D.velocity = velocity;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,5 +80,12 @@ public class Player : MonoBehaviour
             Harvester harvester = collision.GetComponent<Harvester>();
             gameManager.OnPlayerReachHarvester(harvester);
         }
+    }
+
+    [YarnCommand("GetExcited")]
+    public void GetExcited()
+    {
+        float animationSpeed = 2.5f;
+        animator.speed = animationSpeed;
     }
 }

@@ -45,6 +45,7 @@ title: IKnowItsYourFavouriteSeason
 ---
 Stranger: Oh, I know {$favSeason} is your favourite season.
 Stranger: Actually, I know *everything* about you.
+<<GetExcited PlayerSitting>>
 -> Oh?
 -> You do?
 <<jump IHaveBeenWatchingYou>>
@@ -67,4 +68,23 @@ title: HarvesterReveal
 ---
 <<TurnIntoAngel Harvester>>
 Harvester: Call me "Harvester".
+Harvester: But what matters at this exact moment is who you are.
+Harvester: You are a man who devoted himself to truth and justice.
+Harvester: You have suffered from injustice greatly in your childhood, when you were weak.
+Harvester: A reason why you can't stand seeing it haunting the world.
+Harvester: I have seen this pattern countless times in other souls like you, too.
+Harvester: And truth...
+Harvester: You think that if something can be destroyed by truth, it should be destroyed.
+Harvester: And you are right about this thought.
+Harvester: But justice is not the truth of the world.
+Harvester: I would not call justice a reality when it's rare to witness it.
+Harvester: Justice was not the reality for that young woman who was murdered.
+Harvester: Neither for her murderer, who is the son of that billionaire.
+Harvester: Everybody knows what he did, thanks to you, but you know that it didn't put him behind the iron bars where he belongs.
+Harvester: Sad reality is, power does exist, not justice.
+Harvester: But... You have always acted to bring justice to this world and shed light to the truth.
+Harvester: This is priceless.
+Harvester: And all that matters.
+-> So, are you going to take my soul? Am I going to die?
+Harvester: Let me show you something.
 ===
