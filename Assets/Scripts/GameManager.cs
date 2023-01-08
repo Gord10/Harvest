@@ -54,4 +54,11 @@ public class GameManager : MonoBehaviour
     {
         fadeScreen.GetShown();
     }
+
+    public IEnumerator OnPlayerEnterPark()
+    {
+        FadeOut();
+        yield return new WaitForSeconds(2);
+        LoadScene("Park");
+    }
 }

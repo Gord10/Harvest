@@ -14,11 +14,13 @@ public class Player : MonoBehaviour
 
     private BackgroundManager backgroundManager;
     private GameManager gameManager;
+    private Room roomData;
 
     private void Awake()
     {
         backgroundManager = FindObjectOfType<BackgroundManager>();
         gameManager = FindObjectOfType<GameManager>();
+        roomData = FindObjectOfType<Room>();
 
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,16 +50,19 @@ public class Player : MonoBehaviour
 
         desiredMovement = Vector2.ClampMagnitude(desiredMovement, 1);
 
-        if(desiredMovement.x < 0)
+        if(roomData.playerMovementMode == Room.PlayerMovementMode.Y_AND_SCROLLING_X || roomData.playerMovementMode == Room.PlayerMovementMode.ONLY_X)
         {
-            spriteRenderer.flipX = true;
-        }
-        else if(desiredMovement.x > 0)
-        {
-            spriteRenderer.flipX = false;
+            if (desiredMovement.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (desiredMovement.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
 
-        if(backgroundManager)
+        if(backgroundManager && roomData.playerMovementMode == Room.PlayerMovementMode.Y_AND_SCROLLING_X)
         {
             backgroundManager.Move(-desiredMovement.x * speed * Time.deltaTime);
         }
@@ -68,7 +73,16 @@ public class Player : MonoBehaviour
         if(rigidbody2D)
         {
             Vector2 velocity = desiredMovement * speed;
-            velocity.x = 0;
+
+            if(roomData.playerMovementMode == Room.PlayerMovementMode.ONLY_X)
+            {
+                velocity.y = 0;
+            }
+            else if(roomData.playerMovementMode == Room.PlayerMovementMode.Y_AND_SCROLLING_X)
+            {
+                velocity.x = 0;
+            }
+            
             rigidbody2D.velocity = velocity;
         }
     }
@@ -79,6 +93,10 @@ public class Player : MonoBehaviour
         {
             Harvester harvester = collision.GetComponent<Harvester>();
             gameManager.OnPlayerReachHarvester(harvester);
+        }
+        else if(collision.CompareTag("ParkEntranceTrigger"))
+        {
+            gameManager.StartCoroutine(gameManager.OnPlayerEnterPark());
         }
     }
 
