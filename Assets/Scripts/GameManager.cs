@@ -31,4 +31,9 @@ public class GameManager : MonoBehaviour
     {
         return !dialogRunner.IsDialogueRunning;
     }
+
+    public void OnPlayerReachJack()
+    {
+        dialogRunner.StartDialogue("HelloThere");
+    }
 }

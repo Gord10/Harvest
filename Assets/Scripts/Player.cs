@@ -64,4 +64,12 @@ public class Player : MonoBehaviour
         velocity.x = 0;
         rigidbody2D.velocity = velocity;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Jack"))
+        {
+            gameManager.OnPlayerReachJack();
+        }
+    }
 }
