@@ -52,13 +52,26 @@ public class GameManager : MonoBehaviour
     [YarnCommand("FadeOut")]
     public void FadeOut()
     {
+        if(fadeScreen == null)
+        {
+            fadeScreen = FindObjectOfType<FadeScreen>();
+        }
         fadeScreen.GetShown();
     }
 
     public IEnumerator OnPlayerEnterPark()
     {
         FadeOut();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         LoadScene("Park");
+    }
+
+    public void FadeIn()
+    {
+        if (fadeScreen == null)
+        {
+            fadeScreen = FindObjectOfType<FadeScreen>();
+        }
+        fadeScreen.Hide();
     }
 }

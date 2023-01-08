@@ -9,11 +9,20 @@ public class FadeScreen : MonoBehaviour
     private void Awake()
     {
         image = GetComponent<Image>();
-        image.enabled = false;
+        //image.enabled = false;
     }
 
     public void GetShown()
     {
+        if(image == null)
+        {
+            image = GetComponent<Image>();
+        }
         image.enabled = true;
+    }
+
+    public void Hide()
+    {
+        image.enabled = false;
     }
 }

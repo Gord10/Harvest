@@ -6,10 +6,12 @@ using Yarn.Unity;
 public class Harvester : MonoBehaviour
 {
     private Animator animator;
+    private AudioSource audio;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     public void LookAtPlayer(Player player)
@@ -28,5 +30,6 @@ public class Harvester : MonoBehaviour
     public void TurnIntoAngel()
     {
         animator.SetTrigger("angel");
+        audio.Play();
     }
 }

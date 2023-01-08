@@ -16,7 +16,7 @@ public class Room : MonoBehaviour
     public PlayerMovementMode playerMovementMode = PlayerMovementMode.Y_AND_SCROLLING_X;
 
     private DialogueRunner dialogRunner;
-    private void Awake()
+    protected virtual void Awake()
     {
         dialogRunner = FindObjectOfType<DialogueRunner>();
     }
