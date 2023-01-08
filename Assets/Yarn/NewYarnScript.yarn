@@ -87,4 +87,19 @@ Harvester: This is priceless.
 Harvester: And all that matters.
 -> So, are you going to take my soul? Am I going to die?
 Harvester: Let me show you something.
+	<<FadeOut GameManager>>
+	<<wait 1>>
+	<<LoadScene GameManager StreetEnd>>
+===
+title: ComeWithMe
+---
+Harvester: Come with me.
+Harvester: I shall take you to the land where justice exists.
+<<LoadScene GameManager GameEnd>>
+===
+title: Credits
+---
+A Harvest Story
+A game by: Ahmet 'Gord10' Kamil Keles
+Thanks for playing!
 ===

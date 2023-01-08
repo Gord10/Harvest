@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StreetIntro.unity
+    guid: edeb3f36b11a4ee4cb2c9f8bfbbc175b
+  - enabled: 1
     path: Assets/Scenes/Park.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/ChatWithHarvester.unity
+    guid: 4ae6a0db0e517ce4e92c945686329097
+  - enabled: 1
+    path: Assets/Scenes/StreetEnd.unity
+    guid: 2eb2e0bb626fb7745bea8af09945db6a
+  - enabled: 1
+    path: Assets/Scenes/GameEnd.unity
     guid: 6011c37a6621f5843aed88a872386b6e
   m_configObjects: {}

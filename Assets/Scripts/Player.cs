@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameManager.IsPlayerMovementAllowed())
+        if(gameManager.IsPlayerMovementAllowed() && roomData.playerMovementMode != Room.PlayerMovementMode.NO_MOVEMENT)
         {
             desiredMovement.x = Input.GetAxis("Horizontal");
             desiredMovement.y = Input.GetAxis("Vertical");
