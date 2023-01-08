@@ -18,6 +18,12 @@ public class Harvester : MonoBehaviour
         animator.SetBool("lookingRight", isLookingRight);
     }
 
+    [YarnCommand("LookLeft")]
+    public void LookLeft()
+    {
+        animator.SetBool("lookingRight", false);
+    }
+
     [YarnCommand("TurnIntoAngel")]
     public void TurnIntoAngel()
     {

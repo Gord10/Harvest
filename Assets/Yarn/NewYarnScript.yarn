@@ -86,6 +86,7 @@ Harvester: But... You have always acted to bring justice to this world and shed 
 Harvester: This is priceless.
 Harvester: And all that matters.
 -> So, are you going to take my soul? Am I going to die?
+<<LookLeft Harvester>>
 Harvester: Let me show you something.
 	<<FadeOut GameManager>>
 	<<wait 1>>
