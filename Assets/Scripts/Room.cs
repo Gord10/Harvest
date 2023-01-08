@@ -26,7 +26,7 @@ public class Room : MonoBehaviour
         if(startNode != null)
         {
             yield return new WaitForSeconds(waitTime);
-            while (!dialogRunner.NodeExists(startNode))
+            while (!dialogRunner || !dialogRunner.NodeExists(startNode))
             {
                 yield return new WaitForEndOfFrame();
             }

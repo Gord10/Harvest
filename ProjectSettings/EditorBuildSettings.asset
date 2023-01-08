@@ -5,6 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/DialogTest.unity
+    guid: 5076a1dbbbdbfeb43a43698da3b131b4
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 5a200d638556863448bdc3c3416aecfb
   - enabled: 1
     path: Assets/Scenes/StreetIntro.unity
     guid: edeb3f36b11a4ee4cb2c9f8bfbbc175b

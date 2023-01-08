@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
             rigidbody2D.velocity = velocity;
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Jack"))
@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
             gameManager.StartCoroutine(gameManager.OnPlayerEnterPark());
         }
     }
-
+    
     [YarnCommand("GetExcited")]
     public void GetExcited()
     {
