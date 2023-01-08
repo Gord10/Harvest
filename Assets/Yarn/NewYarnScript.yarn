@@ -45,4 +45,26 @@ title: IKnowItsYourFavouriteSeason
 ---
 Stranger: Oh, I know {$favSeason} is your favourite season.
 Stranger: Actually, I know *everything* about you.
+-> Oh?
+-> You do?
+<<jump IHaveBeenWatchingYou>>
+===
+title: IHaveBeenWatchingYou
+---
+Stranger: I have been watching you.
+Stranger: Not only when you had been wandering in this park.
+Stranger: Not after you gained fame as an award-winning journalist.
+Stranger: But since you were born.
+-> Who are you?
+	Stranger: I am not a person.
+	Stranger: "Who" is not the right question.
+	<<jump HarvesterReveal>>
+-> What are you?
+	Stranger: "What" is the correct question, for I'm no human like you.
+	<<jump HarvesterReveal>>
+===
+title: HarvesterReveal
+---
+<<TurnIntoAngel Harvester>>
+Harvester: Call me "Harvester".
 ===
