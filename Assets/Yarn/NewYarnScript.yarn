@@ -3,7 +3,6 @@ tags:
 ---
 Stranger: Hello, there.
 Stranger: Would you want to sit?
-You: Hmm...
-You: HMMM!
-YOU: 21
+-> Player: Yes.
+-> Player: No, thanks.
 ===
