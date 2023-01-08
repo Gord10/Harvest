@@ -5,6 +5,7 @@ using Yarn.Unity;
 public class Room : MonoBehaviour
 {
     public string startNode;
+    public float waitTime = 0;
 
     private DialogueRunner dialogRunner;
     private void Awake()
@@ -14,7 +15,8 @@ public class Room : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        //yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTime);
+
         while(!dialogRunner.NodeExists(startNode))
         {
             yield return new WaitForEndOfFrame();

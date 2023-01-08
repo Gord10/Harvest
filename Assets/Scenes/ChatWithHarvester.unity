@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNode: HarvestSeason
+  waitTime: 2
 --- !u!4 &535218856
 Transform:
   m_ObjectHideFlags: 0

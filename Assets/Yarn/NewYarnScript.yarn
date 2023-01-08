@@ -15,5 +15,34 @@ tags:
 Stranger: What a lovely fall day, isn't it?
 Stranger: Or should I have said "harvest" day?
 -> Yes.
+	<<jump MyFavouriteSeason>>
 -> Why "harvest" day?
-=== 
+	<<jump HarvestSeasonExplain>>
+===
+title: HarvestSeasonExplain
+tags:
+---
+Stranger: In Old English, "harvest" meant "fall season".
+Stranger: You know, they were harvesting the crops at that time of year.
+Stranger: And this is poetic.
+<<jump MyFavouriteSeason>>
+===
+title: MyFavouriteSeason
+---
+Stranger: And it's my favourite season.
+Stranger: When things pass away to reach a level of existence above here.
+-> So is mine.
+	<<set $favSeason to "harvest">>
+-> I like the peace of winter.
+	<<set $favSeason to "winter">>
+-> I am a summer person.
+	<<set $favSeason to "summer">>
+-> I like the joy that spring brings.
+	<<set $favSeason to "spring">>
+<<jump IKnowItsYourFavouriteSeason>>
+===
+title: IKnowItsYourFavouriteSeason
+---
+Stranger: Oh, I know {$favSeason} is your favourite season.
+Stranger: Actually, I know *everything* about you.
+===
