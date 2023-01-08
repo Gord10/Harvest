@@ -69,7 +69,8 @@ public class Player : MonoBehaviour
     {
         if(collision.CompareTag("Jack"))
         {
-            gameManager.OnPlayerReachJack();
+            Harvester harvester = collision.GetComponent<Harvester>();
+            gameManager.OnPlayerReachHarvester(harvester);
         }
     }
 }

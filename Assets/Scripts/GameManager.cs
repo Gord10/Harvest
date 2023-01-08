@@ -6,10 +6,12 @@ using Yarn.Unity;
 public class GameManager : MonoBehaviour
 {
     private DialogueRunner dialogRunner;
+    private Player player;
 
     private void Awake()
     {
         dialogRunner = FindObjectOfType<DialogueRunner>();
+        player = FindObjectOfType<Player>();
     }
 
     // Start is called before the first frame update
@@ -32,8 +34,9 @@ public class GameManager : MonoBehaviour
         return !dialogRunner.IsDialogueRunning;
     }
 
-    public void OnPlayerReachJack()
+    public void OnPlayerReachHarvester(Harvester harvester)
     {
+        harvester.LookAtPlayer(player);
         dialogRunner.StartDialogue("HelloThere");
     }
 }
