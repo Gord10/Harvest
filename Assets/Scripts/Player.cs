@@ -42,10 +42,14 @@ public class Player : MonoBehaviour
         {
             desiredMovement.x = Input.GetAxis("Horizontal");
             desiredMovement.y = Input.GetAxis("Vertical");
+
+            bool areMovementKeysPressed = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
+            animator.SetBool("isWalking", areMovementKeysPressed);
         }
         else
         {
             desiredMovement = Vector2.zero;
+            animator.SetBool("isWalking", false);
         }
 
         desiredMovement = Vector2.ClampMagnitude(desiredMovement, 1);
