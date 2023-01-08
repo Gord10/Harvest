@@ -4,5 +4,16 @@ tags:
 Stranger: Hello, there.
 Stranger: Would you want to sit?
 -> Player: Yes.
+	<<FadeOut GameManager>>
+	<<wait 1>>
+	<<LoadScene GameManager ChatWithHarvester>>
 -> Player: No, thanks.
 ===
+title: HarvestSeason
+tags:
+---
+Stranger: What a lovely fall day, isn't it?
+Stranger: Or should I have said "harvest" day?
+-> Yes.
+-> Why "harvest" day?
+=== 
