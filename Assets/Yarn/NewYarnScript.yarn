@@ -1,107 +1,105 @@
 ﻿title: HelloThere
 tags:
 ---
-Stranger: Hello, there.
-Stranger: Would you want to sit?
--> Player: Yes.
+Stranger: Hello, there. #line:02e988f 
+Stranger: Would you want to sit? #line:08fb4da 
+-> Player: Yes. #line:086bd96 
 	<<FadeOut GameManager>>
 	<<wait 1>>
 	<<LoadScene GameManager ChatWithHarvester>>
--> Player: No, thanks.
+-> Player: No, thanks. #line:040654b 
 ===
 title: HarvestSeason
 tags:
 ---
-Stranger: What a lovely fall day, isn't it?
-Stranger: Or should I have said "harvest" day?
--> Yes.
+Stranger: What a lovely fall day, isn't it? #line:08c4f2c 
+Stranger: Or should I have said "harvest" day? #line:0b4c1d4 
+-> Yes. #line:058e422 
 	<<jump MyFavouriteSeason>>
--> Why "harvest" day?
+-> Why "harvest" day? #line:09920ff 
 	<<jump HarvestSeasonExplain>>
-===
 title: HarvestSeasonExplain
 tags:
 ---
-Stranger: In Old English, "harvest" meant "fall season".
-Stranger: You know, they were harvesting the crops at that time of year.
-Stranger: And this is poetic.
+Stranger: In Old English, "harvest" meant "fall season". #line:0c6d60a 
+Stranger: You know, they were harvesting the crops at that time of year. #line:0754f1e 
+Stranger: And this is poetic. #line:00d00e4 
 <<jump MyFavouriteSeason>>
 ===
 title: MyFavouriteSeason
 ---
-Stranger: And it's my favourite season.
-Stranger: When things pass away to reach a level of existence above here.
--> So is mine.
+Stranger: And it's my favourite season. #line:0e6120c 
+Stranger: When things pass away to reach a level of existence above here. #line:0fcc9bc 
+-> So is mine. #line:03397c0 
 	<<set $favSeason to "harvest">>
--> I like the peace of winter.
+-> I like the peace of winter. #line:0b35e38 
 	<<set $favSeason to "winter">>
--> I am a summer person.
+-> I am a summer person. #line:0c576df 
 	<<set $favSeason to "summer">>
--> I like the joy that spring brings.
+-> I like the joy that spring brings. #line:0b3624e 
 	<<set $favSeason to "spring">>
 <<jump IKnowItsYourFavouriteSeason>>
 ===
 title: IKnowItsYourFavouriteSeason
 ---
-Stranger: Oh, I know {$favSeason} is your favourite season.
-Stranger: Actually, I know *everything* about you.
+Stranger: Oh, I know {$favSeason} is your favourite season. #line:09a66bd 
+Stranger: Actually, I know *everything* about you. #line:09751fe 
 <<GetExcited PlayerSitting>>
--> Oh?
--> You do?
+-> Oh? #line:0a763b8 
+-> You do? #line:09d7187 
 <<jump IHaveBeenWatchingYou>>
 ===
 title: IHaveBeenWatchingYou
 ---
-Stranger: I have been watching you.
-Stranger: Not only when you had been wandering in this park.
-Stranger: Not after fame found you as an award-winning journalist.
-Stranger: But since you were born.
--> Who are you?
-	Stranger: I am not a person.
-	Stranger: "Who" is not the right question.
+Stranger: I have been watching you. #line:0fd51cd 
+Stranger: Not only when you had been wandering in this park. #line:098ec29 
+Stranger: Not after fame found you as an award-winning journalist. #line:0284f3a 
+Stranger: But since you were born. #line:074c735 
+-> Who are you? #line:0cef76d 
+	Stranger: I am not a person. #line:0bbd700 
+	Stranger: "Who" is not the right question. #line:01e31e6 
 	<<jump HarvesterReveal>>
--> What are you?
-	Stranger: "What" is the correct question, for I'm no human like you.
+-> What are you? #line:0dba003 
+	Stranger: "What" is the correct question, for I'm no human like you. #line:0360d13 
 	<<jump HarvesterReveal>>
-===
 title: HarvesterReveal
 ---
 <<TurnIntoAngel Harvester>>
-Harvester: Call me "Harvester".
-Harvester: But what matters at this exact moment is who you are.
-Harvester: You are a man who devoted himself to truth and justice.
-Harvester: You have suffered from injustice greatly in your childhood, when you were weak.
-Harvester: A reason why you can't stand seeing it haunting the world.
-Harvester: I have seen this pattern countless times in other souls like you, too.
-Harvester: And truth...
-Harvester: You think that if something can be destroyed by truth, it deserves to be destroyed.
-Harvester: And you are right about this thought.
-Harvester: But justice is not the truth of the world.
-Harvester: I would not call justice a reality when it's rare to witness it.
-Harvester: Justice was not the reality for that young woman who was murdered.
-Harvester: Neither for her murderer, who is the son of that billionaire.
-Harvester: Everybody knows what he did, thanks to you, but you know that it didn't put him behind the iron bars where he belongs.
-Harvester: Sad reality is, power does exist, not justice.
-Harvester: But... You have always acted to bring justice to this world and shed light to the truth.
-Harvester: This is priceless.
-Harvester: And all that matters.
--> So, are you going to take my soul? Am I going to die?
+Harvester: Call me "Harvester". #line:0e3d6aa 
+Harvester: But what matters at this exact moment is who you are. #line:04a289c 
+Harvester: You are a man who devoted himself to truth and justice. #line:07c48e8 
+Harvester: You have suffered from injustice greatly in your childhood, when you were weak. #line:08b99ca 
+Harvester: A reason why you can't stand seeing it haunting the world. #line:0254409 
+Harvester: I have seen this pattern countless times in other souls like you, too. #line:0aca64d 
+Harvester: And truth... #line:0772d07 
+Harvester: You think that if something can be destroyed by truth, it deserves to be destroyed. #line:0ea1238 
+Harvester: And you are right about this thought. #line:087ad3d 
+Harvester: But justice is not the truth of the world. #line:06dce91 
+Harvester: I would not call justice a reality when it's rare to witness it. #line:0ffe1b2 
+Harvester: Justice was not the reality for that young woman who was murdered. #line:057e4b6 
+Harvester: Neither for her murderer, who is the son of that billionaire. #line:05264bc 
+Harvester: Everybody knows what he did, thanks to you, but you know that it didn't put him behind the iron bars where he belongs. #line:0799ada 
+Harvester: Sad reality is, power does exist, not justice. #line:0cb480b 
+Harvester: But... You have always acted to bring justice to this world and shed light to the truth. #line:0dfc782 
+Harvester: This is priceless. #line:0ca9612 
+Harvester: And all that matters. #line:0622dbc 
+-> So, are you going to take my soul? Am I going to die? #line:0c0a26c 
 <<LookLeft Harvester>>
-Harvester: Let me show you something.
+Harvester: Let me show you something. #line:05f58c0 
 	<<FadeOut GameManager>>
 	<<wait 1>>
 	<<LoadScene GameManager StreetEnd>>
 ===
 title: ComeWithMe
 ---
-Harvester: Come with me.
-Harvester: I shall take you to the land where justice exists.
+Harvester: Come with me. #line:08178fe 
+Harvester: I shall take you to the land where justice exists. #line:07e41ef 
 <<LoadScene GameManager GameEnd>>
 ===
 title: Credits
 ---
-A Harvest Story
-A game by: Ahmet 'Gord10' Kamil Keles
-Dialogue powered by Yarn Spinner, by Secret Lab and friends. www.yarnspinner.dev
-Thanks for playing!
+A Harvest Story #line:0c82dda 
+A game by: Ahmet 'Gord10' Kamil Keles #line:0aa70ba 
+Dialogue powered by Yarn Spinner, by Secret Lab and friends. www.yarnspinner.dev #line:081f5c3 
+Thanks for playing! #line:03146c1 
 ===
