@@ -33,25 +33,25 @@ tags:
 Stranger: And it's my favourite season. #line:0e6120c 
 Stranger: When things pass away to reach a level of existence above here. #line:0fcc9bc 
 -> So is mine. #line:03397c0 
-	<<if $lang == "en">>
+	<<if $lang=="en">>
 		<<set $favSeason to "harvest">>
 	<<else>>
 		<<set $favSeason to "hasat">>
 	<<endif>>	
 -> I like the peace of winter. #line:0b35e38 
-	<<if $lang == "en">>
+	<<if $lang=="en">>
 		<<set $favSeason to "winter">>
 	<<else>>
 		<<set $favSeason to "kış">>
 	<<endif>>
 -> I am a summer person. #line:0c576df 
-	<<if $lang == "en">>
+	<<if $lang=="en">>
 		<<set $favSeason to "summer">>
 	<<else>>
 		<<set $favSeason to "yaz">>
 	<<endif>>
 -> I like the joy that spring brings. #line:0b3624e 
-	<<if $lang == "en">>
+	<<if $lang=="en">>
 		<<set $favSeason to "spring">>
 	<<else>>
 		<<set $favSeason to "ilkbahar">>
@@ -99,7 +99,8 @@ Harvester: But justice is not the truth of the world. #line:06dce91
 Harvester: I would not call justice a reality when it's rare to witness it. #line:0ffe1b2 
 Harvester: Justice was not the reality for that young woman who was murdered. #line:057e4b6 
 Harvester: Neither for her murderer, who is the son of that billionaire. #line:05264bc 
-Harvester: Everybody knows what he did, thanks to you, but you know that it didn't put him behind the iron bars where he belongs. #line:0799ada 
+Harvester: Everybody knows what he did, thanks to you. #line:0799ada 
+Harvester: But you know that it didn't put him behind the iron bars where he belongs.  #line:071fe6a 
 Harvester: Sad reality is, power does exist, not justice. #line:0cb480b 
 Harvester: But... You have always acted to bring justice to this world and shed light to the truth. #line:0dfc782 
 Harvester: This is priceless. #line:0ca9612 
@@ -125,4 +126,13 @@ A Harvest Story #line:0c82dda
 A game by: Ahmet 'Gord10' Kamil Keles #line:0aa70ba 
 Dialogue powered by Yarn Spinner, by Secret Lab and friends. www.yarnspinner.dev #line:081f5c3 
 Thanks for playing! #line:03146c1 
+===
+title: Language
+tags:
+---
+-> English #line:033713c 
+	<<set $lang to "en">>
+-> Türkçe #line:0696380 
+	<<set $lang to "tr">>
+<<LoadScene GameManager Title>>
 ===
