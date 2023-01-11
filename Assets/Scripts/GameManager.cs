@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static string Language = "en-US";
+
     private DialogueRunner dialogRunner;
+    private AudioLineProvider lineProvider;
     private Player player;
     private FadeScreen fadeScreen;
 
@@ -15,6 +18,9 @@ public class GameManager : MonoBehaviour
         dialogRunner = FindObjectOfType<DialogueRunner>();
         player = FindObjectOfType<Player>();
         fadeScreen = FindObjectOfType<FadeScreen>();
+
+        lineProvider = FindObjectOfType<AudioLineProvider>();
+        lineProvider.textLanguageCode = Language;
     }
 
     // Start is called before the first frame update
@@ -80,5 +86,18 @@ public class GameManager : MonoBehaviour
             fadeScreen = FindObjectOfType<FadeScreen>();
         }
         fadeScreen.Hide();
+    }
+
+    [YarnCommand("SetLanguage")]
+    public void SetLanguage(string languageCode)
+    {
+        Language = languageCode;
+        print(Language);
+    }
+
+    [YarnFunction("GetLanguage")]
+    public static string GetLanguage()
+    {
+        return Language;
     }
 }

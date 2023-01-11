@@ -1,9 +1,26 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using Yarn.Unity;
+
 public class Title : MonoBehaviour
 {
+    public TextMeshProUGUI title;
+    public TextMeshProUGUI pressAnyKey;
+
+    private void Awake()
+    {
+        if(GameManager.Language == "tr")
+        {
+            title.text = "BİR HASAT HİKAYESİ";
+            pressAnyKey.text = "Devam etmek için herhangi bir tuşa basın...";
+        }
+
+        pressAnyKey.enabled = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +30,14 @@ public class Title : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown && Time.timeSinceLevelLoad > 1)
+        if(Time.timeSinceLevelLoad > 1)
         {
-            SceneManager.LoadScene("StreetIntro");
+            pressAnyKey.enabled = ((int)(Time.timeSinceLevelLoad * 2f)) % 2 == 0;
+
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("StreetIntro");
+            }
         }
 
 #if UNITY_STANDALONE

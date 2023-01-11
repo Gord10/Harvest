@@ -33,25 +33,25 @@ tags:
 Stranger: And it's my favourite season. #line:0e6120c 
 Stranger: When things pass away to reach a level of existence above here. #line:0fcc9bc 
 -> So is mine. #line:03397c0 
-	<<if $lang=="en">>
+	<<if GetLanguage() == "en-US">>
 		<<set $favSeason to "harvest">>
 	<<else>>
 		<<set $favSeason to "hasat">>
 	<<endif>>	
 -> I like the peace of winter. #line:0b35e38 
-	<<if $lang=="en">>
+	<<if GetLanguage() == "en-US">>
 		<<set $favSeason to "winter">>
 	<<else>>
 		<<set $favSeason to "kış">>
 	<<endif>>
 -> I am a summer person. #line:0c576df 
-	<<if $lang=="en">>
+	<<if GetLanguage() == "en-US">>
 		<<set $favSeason to "summer">>
 	<<else>>
 		<<set $favSeason to "yaz">>
 	<<endif>>
 -> I like the joy that spring brings. #line:0b3624e 
-	<<if $lang=="en">>
+	<<if GetLanguage() == "en-US">>
 		<<set $favSeason to "spring">>
 	<<else>>
 		<<set $favSeason to "ilkbahar">>
@@ -116,7 +116,7 @@ title: ComeWithMe
 tags:
 ---
 Harvester: Come with me. #line:08178fe 
-Harvester: I shall take you to the land where justice exists. #line:07e41ef 
+Harvester: I shall take you to the land where justice is the truth. #line:07e41ef 
 <<LoadScene GameManager GameEnd>>
 ===
 title: Credits
@@ -132,7 +132,9 @@ tags:
 ---
 -> English #line:033713c 
 	<<set $lang to "en">>
+	<<SetLanguage GameManager "en-US">>
 -> Türkçe #line:0696380 
 	<<set $lang to "tr">>
+	<<SetLanguage GameManager "tr">>
 <<LoadScene GameManager Title>>
 ===
