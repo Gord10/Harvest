@@ -18,6 +18,7 @@ Stranger: Or should I have said "harvest" day? #line:0b4c1d4
 	<<jump MyFavouriteSeason>>
 -> Why "harvest" day? #line:09920ff 
 	<<jump HarvestSeasonExplain>>
+===
 title: HarvestSeasonExplain
 tags:
 ---
@@ -27,17 +28,34 @@ Stranger: And this is poetic. #line:00d00e4
 <<jump MyFavouriteSeason>>
 ===
 title: MyFavouriteSeason
+tags:
 ---
 Stranger: And it's my favourite season. #line:0e6120c 
 Stranger: When things pass away to reach a level of existence above here. #line:0fcc9bc 
 -> So is mine. #line:03397c0 
-	<<set $favSeason to "harvest">>
+	<<if $lang == "en">>
+		<<set $favSeason to "harvest">>
+	<<else>>
+		<<set $favSeason to "hasat">>
+	<<endif>>	
 -> I like the peace of winter. #line:0b35e38 
-	<<set $favSeason to "winter">>
+	<<if $lang == "en">>
+		<<set $favSeason to "winter">>
+	<<else>>
+		<<set $favSeason to "kış">>
+	<<endif>>
 -> I am a summer person. #line:0c576df 
-	<<set $favSeason to "summer">>
+	<<if $lang == "en">>
+		<<set $favSeason to "summer">>
+	<<else>>
+		<<set $favSeason to "yaz">>
+	<<endif>>
 -> I like the joy that spring brings. #line:0b3624e 
-	<<set $favSeason to "spring">>
+	<<if $lang == "en">>
+		<<set $favSeason to "spring">>
+	<<else>>
+		<<set $favSeason to "ilkbahar">>
+	<<endif>>
 <<jump IKnowItsYourFavouriteSeason>>
 ===
 title: IKnowItsYourFavouriteSeason
@@ -50,6 +68,7 @@ Stranger: Actually, I know *everything* about you. #line:09751fe
 <<jump IHaveBeenWatchingYou>>
 ===
 title: IHaveBeenWatchingYou
+tags:
 ---
 Stranger: I have been watching you. #line:0fd51cd 
 Stranger: Not only when you had been wandering in this park. #line:098ec29 
@@ -62,7 +81,9 @@ Stranger: But since you were born. #line:074c735
 -> What are you? #line:0dba003 
 	Stranger: "What" is the correct question, for I'm no human like you. #line:0360d13 
 	<<jump HarvesterReveal>>
+===
 title: HarvesterReveal
+tags:
 ---
 <<TurnIntoAngel Harvester>>
 Harvester: Call me "Harvester". #line:0e3d6aa 
@@ -91,12 +112,14 @@ Harvester: Let me show you something. #line:05f58c0
 	<<LoadScene GameManager StreetEnd>>
 ===
 title: ComeWithMe
+tags:
 ---
 Harvester: Come with me. #line:08178fe 
 Harvester: I shall take you to the land where justice exists. #line:07e41ef 
 <<LoadScene GameManager GameEnd>>
 ===
 title: Credits
+tags:
 ---
 A Harvest Story #line:0c82dda 
 A game by: Ahmet 'Gord10' Kamil Keles #line:0aa70ba 

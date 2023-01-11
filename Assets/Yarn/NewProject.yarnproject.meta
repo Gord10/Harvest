@@ -11,9 +11,20 @@ ScriptedImporter:
   sourceScripts:
   - {fileID: 6391573757903218779, guid: c0f7c09ada47d8941a2bc2c01ecfdf7a, type: 3}
   compileErrors: []
-  serializedDeclarations: []
+  serializedDeclarations:
+  - name: $favSeason
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in NewYarnScript.yarn, node MyFavouriteSeason
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: c0f7c09ada47d8941a2bc2c01ecfdf7a, type: 3}
   defaultLanguage: en-US
-  languagesToSourceAssets: []
+  languagesToSourceAssets:
+  - languageID: tr
+    stringsFile: {fileID: 4900000, guid: 80b63fbba5fdfc848816a13350ed1961, type: 3}
+    assetsFolder: {instanceID: 0}
   useAddressableAssets: 0
   searchAllAssembliesForActions: 1
   assembliesToSearch: []
