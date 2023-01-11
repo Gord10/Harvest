@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     }
 
     [YarnCommand("LoadScene")]
-    public void LoadScene(string sceneName)
+    public static void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     }
 
     [YarnCommand("SetLanguage")]
-    public void SetLanguage(string languageCode)
+    public static void SetLanguage(string languageCode)
     {
         Language = languageCode;
         print(Language);

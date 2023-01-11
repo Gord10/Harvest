@@ -29,6 +29,9 @@ ScriptedImporter:
   searchAllAssembliesForActions: 1
   assembliesToSearch: []
   ListOfFunctions:
+  - Name: GetLanguage
+    ReturnType: -> String
+    Parameters: []
   - Name: Random
     ReturnType: -> Single
     Parameters: []

@@ -6,7 +6,7 @@ Stranger: Would you want to sit? #line:08fb4da
 -> Player: Yes. #line:086bd96 
 	<<FadeOut GameManager>>
 	<<wait 1>>
-	<<LoadScene GameManager ChatWithHarvester>>
+	<<LoadScene ChatWithHarvester>>
 -> Player: No, thanks. #line:040654b 
 ===
 title: HarvestSeason
@@ -110,14 +110,14 @@ Harvester: And all that matters. #line:0622dbc
 Harvester: Let me show you something. #line:05f58c0 
 	<<FadeOut GameManager>>
 	<<wait 1>>
-	<<LoadScene GameManager StreetEnd>>
+	<<LoadScene StreetEnd>>
 ===
 title: ComeWithMe
 tags:
 ---
 Harvester: Come with me. #line:08178fe 
 Harvester: I shall take you to the land where justice is the truth. #line:07e41ef 
-<<LoadScene GameManager GameEnd>>
+<<LoadScene GameEnd>>
 ===
 title: Credits
 tags:
@@ -131,10 +131,8 @@ title: Language
 tags:
 ---
 -> English #line:033713c 
-	<<set $lang to "en">>
-	<<SetLanguage GameManager "en-US">>
+	<<SetLanguage "en-US">>
 -> Türkçe #line:0696380 
-	<<set $lang to "tr">>
-	<<SetLanguage GameManager "tr">>
-<<LoadScene GameManager Title>>
+	<<SetLanguage "tr">>
+<<LoadScene Title>>
 ===

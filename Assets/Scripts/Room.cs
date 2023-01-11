@@ -26,7 +26,17 @@ public class Room : MonoBehaviour
         if(startNode != null)
         {
             yield return new WaitForSeconds(waitTime);
-            while (!dialogRunner || !dialogRunner.NodeExists(startNode))
+            while (!dialogRunner)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            while(!dialogRunner.yarnProject)
+            {
+                print("No yarn project!");
+            }
+
+            while (!dialogRunner.NodeExists(startNode))
             {
                 yield return new WaitForEndOfFrame();
             }

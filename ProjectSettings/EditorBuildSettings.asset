@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/DialogTest.unity
-    guid: 5076a1dbbbdbfeb43a43698da3b131b4
+    path: Assets/Scenes/Commodore64Intro.unity
+    guid: 46c8bbf413162dc47b1511dd43a49527
+  - enabled: 1
+    path: Assets/Scenes/Language.unity
+    guid: b98a4885605b63b428f01afed50ab6bd
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 5a200d638556863448bdc3c3416aecfb
