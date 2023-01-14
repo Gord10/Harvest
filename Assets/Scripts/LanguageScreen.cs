@@ -15,8 +15,18 @@ public class LanguageScreen : MonoBehaviour
         GameManager.SetLanguage("tr");
     }
 
+    public void MakeUkranian()
+    {
+        GameManager.SetLanguage("uk");
+    }
+
     public void StartTitle()
     {
         SceneManager.LoadScene("Title");
+    }
+
+    public void StartCredits()
+    {
+        SceneManager.LoadScene("GameEnd");
     }
 }
