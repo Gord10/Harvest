@@ -35,24 +35,32 @@ Stranger: When things pass away to reach a level of existence above here. #line:
 -> So is mine. #line:03397c0 
 	<<if GetLanguage()=="en-US">>
 		<<set $favSeason to "harvest">>
-	<<else>>
+	<<elseif GetLanguage()=="uk">>
+		<<set $favSeason to "жнивець">>
+	<<else>>	
 		<<set $favSeason to "hasat">>
 	<<endif>>	
 -> I like the peace of winter. #line:0b35e38 
 	<<if GetLanguage()=="en-US">>
 		<<set $favSeason to "winter">>
+	<<elseif GetLanguage()=="uk">>
+		<<set $favSeason to "зима">>
 	<<else>>
 		<<set $favSeason to "kış">>
 	<<endif>>
 -> I am a summer person. #line:0c576df 
 	<<if GetLanguage()=="en-US">>
 		<<set $favSeason to "summer">>
+	<<elseif GetLanguage()=="uk">>
+		<<set $favSeason to "літо">>
 	<<else>>
 		<<set $favSeason to "yaz">>
 	<<endif>>
 -> I like the joy that spring brings. #line:0b3624e 
 	<<if GetLanguage()=="en-US">>
 		<<set $favSeason to "spring">>
+	<<elseif GetLanguage()=="uk">>
+		<<set $favSeason to "весна">>
 	<<else>>
 		<<set $favSeason to "ilkbahar">>
 	<<endif>>

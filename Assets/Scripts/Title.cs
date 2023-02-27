@@ -17,6 +17,11 @@ public class Title : MonoBehaviour
             title.text = "BİR HASAT HİKAYESİ";
             pressAnyKey.text = "Devam etmek için herhangi bir tuşa basın...";
         }
+        else if(GameManager.Language == "uk")
+        {
+            title.text = "Розповідь про жнива";
+            pressAnyKey.text = "Натисніть будь - яку клавішу щоб продовжити...";
+        }
 
         pressAnyKey.enabled = false;
     }

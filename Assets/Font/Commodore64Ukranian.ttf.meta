@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d527e0f89374248498d969952d2fa048
+guid: c80a23cbcefbb264081b5bc81b1120d5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Pet Me 128
-  fallbackFontReferences: []
+  - Commodore64
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3cf361f32ed67b540ae927c538311d44, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
