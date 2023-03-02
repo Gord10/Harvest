@@ -966,7 +966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0423\u043A\u0440\u0430\u0457\u043D\u044C\u0441\u043A\u0438\u0439"
+  m_text: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89537c9ea9b82454ea6f66023603e40f, type: 2}
   m_sharedMaterial: {fileID: -8804785403207728278, guid: 89537c9ea9b82454ea6f66023603e40f, type: 2}
